@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- TailwindCSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-12">
+    <form class="bg-green-500" id="productForm">
+        <div class="flex justify-center">
+            <h1 class="font-bold text-6xl py-4">Shopping Cart</h1>
+        </div>
+        <div>
+            <h2 class="font-bold text-2xl py-4">Add item for selection</h2>
+        </div>
+        <div class="flex justify-between">
+            <div>
+                <label class="font-bold text-xl" for="product name">Product name:</label>
+                <input type="text"
+                    id="productName"
+                    name="productName"
+                    required
+                    class=""
+                >
+            </div>
+            <div>
+                <label class="font-bold text-xl" for="product price">Price:</label>
+                <input type="text"
+                    id="productPrice"
+                    name="productPrice"
+                    required
+                    class=""
+                >
+            </div>
+            <div class="justify-center">
+                <label class="font-bold text-xl" for="image">Image:</label>
+                <input type="url"
+                       name="image"
+                       id="image"
+                       required
+                       class=""
+                >
+            </div>
+            <div class="pr-4">
+                <button type="submit" class="bg-slate-100 border-2 border-black rounded font-bold px-4">Create Product</button>
+            </div>
+
+        </div>
+        <div class=" p-4 bg-yellow-400">
+            <h2 class="text-2xl mb-4 font-bold text-grey-700 px-4 text-center">
+                Product List
+            </h2>
+            <div id="productList" class="flex-col ">
+            </div>
+        </div>
+
+    </form>
+    <div class="flex justify-center">
+        <button onclick="addToCart()" class="bg-slate-100 w-[100%] font-bold text-2xl border-2 border-black rounded ">Add to cart</button>
+    </div>
+    <div id="cartList" class="bg-rose-500">
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
